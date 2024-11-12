@@ -15,6 +15,8 @@ conda create --name my_project_env
 conda activate my_project_env
 pip install -r requirements.txt
 ```
+To add pre-commit hooks, run the following command:
+`pre-commit install`
 
 #### Pulling the Model and Running Ollama
 
