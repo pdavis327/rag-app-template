@@ -6,3 +6,6 @@ langchain_huggingface==0.1.0
 langchain_ollama==0.2.0
 python-dotenv==1.0.1
 streamlit==1.39.0
+pre-commit==4.0.1
+flake8==7.1.1
+black==24.10.0
