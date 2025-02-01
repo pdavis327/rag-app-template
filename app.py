@@ -14,6 +14,7 @@ from util import query
 chroma_collection_name = os.getenv("CHROMA_COLLECTION_NAME")
 embedding_model = embedding.init_embedding_model()
 chroma_persist_path = os.getenv("CHROMA_PERSIST_PATH")
+llm = os.getenv("LLM")
 
 
 # check if docker is running
@@ -33,7 +34,7 @@ if not is_docker():
     llm = query.init_llm()
 else:
     # for ollama in docker image
-    llm = Ollama(model="llama2", base_url="http://ollama-container:11434")
+    llm = Ollama(model=llm, base_url="http://ollama-container:11434")
 
 # Load data from vector db
 db = Chroma(

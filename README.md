@@ -51,7 +51,7 @@ You can create a Chroma database and embed documents using `util/chroma.py`. It 
 Run the following command:
 
 ```zsh
-python util/chroma.py local_rag_chatbot/assets/library
+python util/chroma.py ./assets/library
 ```
 
 The results will be stored using your environment variables in a new Chroma database defined by `CHROMA_COLLECTION_NAME` and `CHROMA_PERSIST_PATH`.
@@ -77,6 +77,7 @@ streamlit run app.py
 If you prefer to run the app in Docker, use the following command:
 
 ```zsh
+docker-compose build
 docker-compose up
 ```
 

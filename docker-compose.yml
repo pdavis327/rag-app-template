@@ -9,6 +9,10 @@ services:
         - ./ollama/ollama:/root/.ollama
         - ./entrypoint.sh:/entrypoint.sh
     entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+    env_file:
+      - .env
+    networks:
+      - ollama-network 
 
   streamlit-app:
     build: .
@@ -17,3 +21,11 @@ services:
       BASE_URL: http://localhost:11434
     ports:
       - "8501:8501"
+    env_file:
+      - .env
+    networks:
+      - ollama-network 
+
+networks:
+  ollama-network:
+    driver: bridge  
