@@ -56,14 +56,6 @@ python util/chroma.py ./assets/library
 
 The results will be stored using your environment variables in a new Chroma database defined by `CHROMA_COLLECTION_NAME` and `CHROMA_PERSIST_PATH`.
 
-### Running the Chatbot
-
-To test the chatbot, run `test.py` from the command line. Note that it does not retain chat history. Simply supply a query:
-
-```zsh
-python test.py 'What role do schools play in disaster response?'
-```
-
 ### Running the Application
 
 To run the app locally, use:
