@@ -1,0 +1,8 @@
+FROM ollama/ollama:latest 
+
+WORKDIR /app
+
+RUN apt-get update \
+    && apt-get install -y curl ca-certificates
+
+ENTRYPOINT ["/usr/bin/bash", "/entrypoint.sh"]

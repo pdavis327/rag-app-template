@@ -64,12 +64,11 @@ To run the app locally, use:
 streamlit run app.py
 ```
 
-#### Running the App in Docker
+#### Running the App in containers
 
-If you prefer to run the app in Docker, use the following command:
+If you prefer to run the app in containers, use the following command:
 
 ```zsh
-docker-compose build
 docker-compose up
 ```
 
