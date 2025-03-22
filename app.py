@@ -16,7 +16,6 @@ embedding_model = embedding.init_embedding_model()
 chroma_persist_path = os.getenv("CHROMA_PERSIST_PATH")
 llm = os.getenv("LLM")
 
-
 # check if docker is running
 def is_docker():
     def text_in_file(text, filename):
@@ -41,7 +40,7 @@ db = Chroma(
     collection_name=chroma_collection_name,
     embedding_function=embedding_model,
     persist_directory=chroma_persist_path,
-    collection_metadata={"hnsw:space": "cosine"},
+    collection_metadata={"hnsw:space": "cosine"}
 )
 
 # Setting the title of the Streamlit application
