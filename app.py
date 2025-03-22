@@ -40,7 +40,7 @@ db = Chroma(
     collection_name=chroma_collection_name,
     embedding_function=embedding_model,
     persist_directory=chroma_persist_path,
-    collection_metadata={"hnsw:space": "cosine"}
+    collection_metadata={"hnsw:space": "cosine"},
 )
 
 # Setting the title of the Streamlit application

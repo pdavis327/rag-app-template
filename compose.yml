@@ -13,20 +13,20 @@ services:
     env_file:
       - .env
     networks:
-      - ollama-network 
+      - ollama-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:11434"]  
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 5s
-  
+
   chroma-db:
     image: chromadb/chroma
     ports:
       - "8000:8000"
     networks:
-      - ollama-network 
+      - ollama-network
     env_file:
      - .env
     volumes:
@@ -44,7 +44,7 @@ services:
     env_file:
       - .env
     networks:
-      - ollama-network 
+      - ollama-network
     depends_on:
       ollama-container:
         condition: service_healthy
@@ -53,4 +53,4 @@ services:
 
 networks:
   ollama-network:
-    driver: bridge 
+    driver: bridge

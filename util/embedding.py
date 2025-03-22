@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def init_embedding_model():
     embedding = HuggingFaceEmbeddings(model_name=os.getenv("EMBEDDING_MODEL"))
     return embedding
